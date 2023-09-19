@@ -56,7 +56,7 @@
                                 image:
                             </td>
                             <td>
-                                <form action="/your-server-side-script" method="post" enctype="multipart/form-data">
+                                <form action="">
                                     Please select an image: 
                                     <input type="file" name="userImage" accept="image/*">
                                     <input type="submit" value="Upload Image">
@@ -78,7 +78,7 @@
                         <tr>
                             <td>Course Template</td>
                             <td>
-                                <input type="checkbox">Enable course as a Course Template
+                                <input type="checkbox" id="courset"><label for="courset">Enable course as a Course Template</label>
                             </td>
                         </tr>
                         <tr>
@@ -115,8 +115,8 @@
                                 <input type="date"><br>
                                 <h4>End</h4>
                                 <input type="date"><br>
-                                <input type="checkbox">Restrict students from viewing course from term start date <br>
-                                <input type="checkbox">Restrict students from viewing course after term end date <br>
+                                <input type="checkbox" id="r1"><label for="r1">Restrict students from viewing course from term start date</label> <br>
+                                <input type="checkbox" id="r2"><label for="r2">Restrict students from viewing course after term end date</label> <br>
                             </td>
                         </tr>
                         <tr>
@@ -143,11 +143,11 @@
                         </tr>
                         <tr>
                             <td>Large Course:</td>
-                            <td><input type="checkbox">Launch SpeedGrader filtered by student group</td>
+                            <td><input type="checkbox" id="speed"><label for="speed">Launch SpeedGrader filtered by student group</label></td>
                         </tr>
                         <tr>
                             <td>Grading Scheme:</td>
-                            <td><input type="checkbox">Enable course grading scheme</td>
+                            <td><input type="checkbox" id="scheme"><label for="scheme">Enable course grading scheme</label></td>
                         </tr>
                         <tr>
                             <td>License:</td>
@@ -159,7 +159,7 @@
                         </tr>
                         <tr>
                             <td>File Copyright:</td>
-                            <td><input type="checkbox">Copyright must be selected</td>
+                            <td><input type="checkbox" id="copy"><label for="copy">Copyright must be selected</label></td>
                         </tr>
                         <tr>
                             <td>Visibility:</td>
@@ -168,7 +168,7 @@
                                 <select name="" id="">
                                     <option value="">Course</option>
                                 </select> <br>
-                                <input type="checkbox">Include this course in the public course index
+                                <input type="checkbox" id="publicindex"><label for="publicindex">Include this course in the public course index</label> 
                             </td>
                         </tr>
                         <tr>
@@ -182,7 +182,7 @@
                         <tr>
                             <td>Mastery Path:</td>
                             <td>
-                                <input type="checkbox">Enable individual paths for students in this course
+                                <input type="checkbox" id="path"><label for="path">Enable individual paths for students in this course</label>
                             </td>
                         </tr>
                         <tr>
