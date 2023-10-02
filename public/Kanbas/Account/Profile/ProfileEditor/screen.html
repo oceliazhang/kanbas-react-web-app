@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendors/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
 </head>
+
 <body>
-    <table class="layout-table" width="100%">
-        <tr>
-            <td valign="top">
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="/Kanbas/Calendar/screen.html">Calendar</a></li>
-                <li><a href="/Kanbas/Inbox/screen.html">Inbox</a></li>
-                <li><a href="/Kanbas/History/screen.html">History</a></li>
-                <li><a href="/Kanbas/Studio/screen.html">Studio</a></li>
-                <li><a href="/Kanbas/Commons/screen.html">Commons</a></li>
-                <li><a href="/Kanbas/Help/screen.html">Help</a></li>
-            </td>
-            <td valign="top">
+    <div class="d-block d-md-none">
+        <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
+        <a href="/Kanbas/Courses/CourseNavigation">Course Navigator</a>
+    </div>
+    <div class="wd-flex-row-container">
+        <div class="wd-bg-color-black d-none d-md-block">
+            <ul class="wd-kanbas-navigation">
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user" style="color: black;"></i>Account</a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a></li>
+                <li><a href="/Kanbas/Calendar/screen.html"><i class="fas fa-calendar-day"></i>Calendar</a></li>
+                <li><a href="/Kanbas/Inbox/screen.html"><i class="fas fa-inbox"></i>Inbox</a></li>
+                <li><a href="/Kanbas/History/screen.html"><i class="far fa-clock"></i>History</a></li>
+                <li><a href="/Kanbas/Studio/screen.html"><i class="fas fa-film"></i>Studio</a></li>
+                <li><a href="/Kanbas/Commons/screen.html"><i class="fas fa-external-link-alt"></i>Commons</a></li>
+                <li><a href="/Kanbas/Help/screen.html"><i class="far fa-question-circle" style="margin-right: 8px; font-size: 30px;"></i>Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="wd-course-navigation d-none d-md-block">
                 <li><a href="">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
                 <li><a href="">Files</a></li>
                 <li><a href="">Settings</a></li>
                 <li><a href="">ePortfolios</a></li>
@@ -31,53 +43,66 @@
                 <li><a href="">The Hub</a></li>
                 <li><a href="">Quickly Course Tools</a></li>
                 <li><a href="">Global Announcements</a></li>
-            </td>
-            <td valign="top">
-                <h3>Xinjia Zhang</h3>
-                <form action="/Kanbas/Account/Profile/screen.html">
-                    Name:* <input name="fullName" type="text" placeholder="Your Name">
-                    Pronouns: 
-                    <select name="" id="">
-                        <option value="" selected>None</option>
-                        <option value="">She/Her/Hers</option>
-                        <option value="">He/Him/His</option>
-                        <option value="">They/Them/Theirs</option>
-                        <option value="">Other</option>
-                    </select>
-                    Title: <input name="title" type="text" placeholder="Your Title">
-                    <h4>Contact</h4>
-                    No registered services, you can add some on the <a href="">settings</a> page.
-                    <h4>Biography</h4>
-                    <p>Software Engineer</p>
-                    <textarea name="biography" id="" cols="30" rows="10">Software Engineer</textarea>
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/xinjia-zhang-297985232/">LinkedIn</a></li>
-                    </ul>
-                    <table>
-                        <thead>
-                            <th>Title</th>
-                            <th> </th>
-                            <th>URL</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="text" value="LinkedIn"></td>
-                                <td>--></td>
-                                <td><input type="text" placeholder="https://www.linkedin.com/in/xinjia-zhang-297985232/"></td>
-                                <td><a href="">Remove</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="button">Add another link</button><br>
-                    <button type="reset">Cancel</button><br>
-                    <button type="submit">Save Profile</button><br>
-                    <button type="submit">Cancel Editing</button>
+            </ul>
+        </div>
+        <div class="wd-flex-grow-1" style="margin-left: 20px; padding: 30px;">
+            <p>Xinjia Zhang's Profile</p>
+            <hr>
+                <i class="fas fa-user-circle wd-profile-icon"></i>
+
+                <form action="/Kanbas/Account/Profile/screen.html" class="wd-profile-form">
+                    <button class="btn btn-secondary" style="margin-left: 200px; align-self: flex-start;"><i class="fas fa-pencil-alt"></i> Cancel Editing</button>
                 </form>
-            </td>
+                
+            
+            <h3 style="margin-bottom: 30px;">Xinjia Zhang</h3>
+            
 
+                <form action="/Kanbas/Account/Profile/screen.html">
+                    <div class="m-3">
+                        <label for="fullName">Name:*</label>
+                        <input name="fullName" type="text" placeholder="Your Name" class="form-control"><br>
+                        
+                        <label for="pronouns">Pronouns:</label>
+                        <select name="pronouns" id="pronouns" class="form-control">
+                            <option value="" selected>None</option>
+                            <option value="she">She/Her/Hers</option>
+                            <option value="he">He/Him/His</option>
+                            <option value="they">They/Them/Theirs</option>
+                            <option value="other">Other</option>
+                        </select><br>
+                        
+                        <label for="title">Title:</label>
+                        <input name="title" type="text" placeholder="Your Title" class="form-control"><br>
+                    </div>
+                    <div class="m-3">
+                        <h4>Contact</h4>
+                        <p>No registered services, you can add some on the <a href="">settings</a> page.</p>
+                    </div>
+                    <div class="m-3">
+                        <h4>Biography</h4>
+                        <textarea name="biography" id="biography" cols="30" rows="10" class="form-control">Software Engineer</textarea>
+                    </div>
+                    <div class="m-3">
+                        <h4>Links</h4>
+                        <div class="row mb-2">
+                            <div class="col">
+                                <label for="title1">Title</label>
+                                <input type="text" value="LinkedIn" class="form-control" id="title1">
+                            </div>
+                            <div class="col">
+                                <label for="url1">URL</label>
+                                <input type="text" placeholder="https://www.linkedin.com/in/xinjia-zhang-297985232/" class="form-control" id="url1">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary">Add another link</button><br>
+                        <button type="reset" class="btn btn-secondary mt-2">Cancel</button><br>
+                        <button type="submit" class="btn btn-danger mt-2">Save Profile</button><br>
+                    </div>
+                </form>
+                
+        </div>
 
-        </tr>
-    </table>
+    </div>
 </body>
 </html>

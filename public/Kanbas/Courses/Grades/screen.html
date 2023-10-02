@@ -6,29 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendors/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
 </head>
 <body>
-    <table class="layout-table" width="100%">
-        <tr>
-            <td valign="top">
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="/Kanbas/Calendar/screen.html">Calendar</a></li>
-                <li><a href="/Kanbas/Inbox/screen.html">Inbox</a></li>
-                <li><a href="/Kanbas/History/screen.html">History</a></li>
-                <li><a href="/Kanbas/Studio/screen.html">Studio</a></li>
-                <li><a href="/Kanbas/Commons/screen.html">Commons</a></li>
-                <li><a href="/Kanbas/Help/screen.html">Help</a></li>
-            </td>
-            <td valign="top">
+    <div style="display: flex">
+        <div class="wd-bg-color-black">
+            <ul class="wd-kanbas-navigation">
+                <li><a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user" style="color: white;"></i>Account</a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a></li>
+                <li><a href="/Kanbas/Calendar/screen.html"><i class="fas fa-calendar-day"></i>Calendar</a></li>
+                <li><a href="/Kanbas/Inbox/screen.html"><i class="fas fa-inbox"></i>Inbox</a></li>
+                <li><a href="/Kanbas/History/screen.html"><i class="far fa-clock"></i>History</a></li>
+                <li><a href="/Kanbas/Studio/screen.html"><i class="fas fa-film"></i>Studio</a></li>
+                <li><a href="/Kanbas/Commons/screen.html"><i class="fas fa-external-link-alt"></i>Commons</a></li>
+                <li><a href="/Kanbas/Help/screen.html"><i class="far fa-question-circle" style="margin-right: 8px; font-size: 30px;"></i>Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="wd-course-navigation">
                 <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
                 <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
                 <li><a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a></li>
                 <li><a href="/Kanbas/Courses/ZoomMeetings/screen.html">Zoom Meetings</a></li>
                 <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
                 <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
                 <li><a href="/Kanbas/Courses/People/screen.html">People</a></li>
                 <li><a href="/Kanbas/Courses/PanoptoVideo/screen.html">Panopto Video</a></li>
                 <li><a href="/Kanbas/Courses/Discussions/screen.html">Discussions</a></li>
@@ -40,35 +47,37 @@
                 <li><a href="/Kanbas/Courses/Collaborations/screen.html">Collaborations</a></li>
                 <li><a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a></li>
                 <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
-            </td>
-            <td valign="top">
-                <select name="" id="">
-                    <option value="">Gradebook</option>
+            </ul>
+        </div>
+        <div>
+            <div class="control-panel">
+                <!-- Selection and Button Controls -->
+                <select>
+                    <option>Gradebook</option>
                 </select>
                 <button>Import</button>
-                <select name="" id="">
-                    <option value="">Export</option>
+                <select>
+                    <option>Export</option>
                 </select>
                 <button>Configure</button>
-            
-                <table>
-                    <tr>
-                        <td>
-                            <strong>Student Names</strong><br>
-                            <input title="Type the name of the student to search for" 
-                                   placeholder="Search Students">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>Assignment Names</strong><br>
-                            <input type="text" placeholder="Search Assignments">
-                        </td>
-                    </tr>
-                </table>
+                
+                <!-- Filters -->
+                <div class="filters">
+                    <div class="filter">
+                        <strong>Student Names</strong><br>
+                        <input title="Type the name of the student to search for" placeholder="Search Students">
+                    </div>
+                    <div class="filter">
+                        <strong>Assignment Names</strong><br>
+                        <input type="text" placeholder="Search Assignments">
+                    </div>
+                </div>
                 <button>Apply Filters</button>
-            
-                <table border="1" width="100%" class="even-layout">
+            </div>
+            <!-- Data Table -->
+            <div class="table-responsive">
+                <table class="table">
+                    <!-- ... table content ... -->
                     <thead>
                         <tr>
                             <th>Student Name</th>
@@ -134,8 +143,8 @@
                         </tr>
                     </tbody>
                 </table>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

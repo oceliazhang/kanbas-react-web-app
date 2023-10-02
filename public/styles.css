@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .wd-main-css-heading {
+    color: green;
+    background-color: yellow;
+  }
+  
+  .wd-fg-color-black {
+    color: black;
+  }
+  .wd-fg-color-white {
+    color: white;
+  }
+  .wd-fg-color-blue {
+    color: #7070ff;
+  }
+  .wd-fg-color-red {
+    color: #ff7070;
+  }
+  .wd-fg-color-green {
+    color: green;
+  }
+  
+  .wd-bg-color-yellow {
+    background-color: #ffff07;
+  }
+  .wd-bg-color-blue {
+    background-color: #7070ff;
+  }
+  .wd-bg-color-red {
+    background-color: #ff7070;
+  }
+  .wd-bg-color-green {
+    background-color: green;
+  }
+  .wd-bg-color-black {
+    background-color: black;
+  }
+  
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .wd-flex-grow-1 {
+    flex-grow: 1;
+  }
+
+  .wd-profile-section {
+    display: flex; /* Makes the container a flex container */
+    align-items: center; /* Aligns items vertically in the middle */
+    margin-bottom: 20px;
+}
+
+.wd-profile-icon {
+    margin-right: 10px; /* Adds some space between the icon and the button */
+    font-size: 100px; /* Makes the icon larger */
+    color: grey;
+}
+
+.wd-profile-form {
+    display: inline-block; /* Makes the form an inline-level box */
+}
+
+.wd-input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.wd-link-container, .wd-link-header, .wd-link-row {
+  width: 100%;
+}
+
+.wd-link-header, .wd-link-row {
+  padding: 10px;
+}
+
+.wd-link-header div, .wd-link-row div {
+  padding: 10px;
+}
+
+.wd-profile-container {
+  padding: 20px;
+}
+.wd-button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #ff7070;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.wd-button:hover {
+  background-color: #e06060;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}

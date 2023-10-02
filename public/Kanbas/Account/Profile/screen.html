@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendors/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
 </head>
+
 <body>
-    <table class="layout-table" width="100%">
-        <tr>
-            <td valign="top">
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="/Kanbas/Calendar/screen.html">Calendar</a></li>
-                <li><a href="/Kanbas/Inbox/screen.html">Inbox</a></li>
-                <li><a href="/Kanbas/History/screen.html">History</a></li>
-                <li><a href="/Kanbas/Studio/screen.html">Studio</a></li>
-                <li><a href="/Kanbas/Commons/screen.html">Commons</a></li>
-                <li><a href="/Kanbas/Help/screen.html">Help</a></li>
-            </td>
-            <td valign="top">
+    <div class="d-block d-md-none">
+        <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
+        <a href="/Kanbas/Courses/CourseNavigation">Course Navigator</a>
+    </div>
+    <div class="wd-flex-row-container">
+        <div class="wd-bg-color-black d-none d-md-block">
+            <ul class="wd-kanbas-navigation">
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user" style="color: black;"></i>Account</a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a></li>
+                <li><a href="/Kanbas/Calendar/screen.html"><i class="fas fa-calendar-day"></i>Calendar</a></li>
+                <li><a href="/Kanbas/Inbox/screen.html"><i class="fas fa-inbox"></i>Inbox</a></li>
+                <li><a href="/Kanbas/History/screen.html"><i class="far fa-clock"></i>History</a></li>
+                <li><a href="/Kanbas/Studio/screen.html"><i class="fas fa-film"></i>Studio</a></li>
+                <li><a href="/Kanbas/Commons/screen.html"><i class="fas fa-external-link-alt"></i>Commons</a></li>
+                <li><a href="/Kanbas/Help/screen.html"><i class="far fa-question-circle" style="margin-right: 8px; font-size: 30px;"></i>Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="wd-course-navigation d-none d-md-block">
                 <li><a href="">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
                 <li><a href="">Files</a></li>
                 <li><a href="">Settings</a></li>
                 <li><a href="">ePortfolios</a></li>
@@ -31,24 +43,27 @@
                 <li><a href="">The Hub</a></li>
                 <li><a href="">Quickly Course Tools</a></li>
                 <li><a href="">Global Announcements</a></li>
-            </td>
-            <td valign="top">
-                <p>Xinjia Zhang's Profile</p>
-                <hr>
-                <form action="/Kanbas/Account/Profile/ProfileEditor/screen.html">
-                    <button>Edit Profile</button>
+            </ul>
+        </div>
+        <div class="wd-flex-grow-1" style="margin-left: 20px; padding: 30px;">
+            <p>Xinjia Zhang's Profile</p>
+            <hr>
+            <div class="wd-profile-section">
+                <!-- <i class="fas fa-user " style="color: gray; size: 100px;"></i> -->
+                <i class="fas fa-user-circle wd-profile-icon"></i>
+                <form action="/Kanbas/Account/Profile/ProfileEditor/screen.html" class="wd-profile-form">
+                    <button class="btn btn-secondary" style="margin-left: 200px; align-self: flex-start;"><i class="fas fa-pencil-alt"></i> Edit Profile</button>
                 </form>
-                <h3>Xinjia Zhang</h3>
-                <h4>Contact</h4>
-                No registered services, you can add some on the <a href="">settings</a> page.
-                <h4>Biography</h4>
-                <p>Software Engineer</p>
-                <h4>Links</h4>
-                <a href="https://www.linkedin.com/in/xinjia-zhang-297985232/">LinkedIn</a>
-            </td>
-
-
-        </tr>
-    </table>
+            </div>
+            <h3 style="margin-bottom: 30px;">Xinjia Zhang</h3>
+            <h4>Contact</h4>
+            <p>No registered services, you can add some on the <a href="">settings</a> page.</p>
+            <h4>Biography</h4>
+            <p>Software Engineer</p>
+            <h4>Links</h4>
+            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk">Youtube</a><br>
+            <a href="https://www.linkedin.com/in/xinjia-zhang-297985232/">LinkedIn</a>
+        </div>
+    </div>
 </body>
 </html>
