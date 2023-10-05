@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 
 <body>
@@ -21,6 +23,7 @@
     <div class="wd-flex-row-container">
         <div class="wd-bg-color-black d-none d-md-block">
             <ul class="wd-kanbas-navigation">
+                <li style="color: brown; font-size: 50px;">N</li>
                 <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user" style="color: black;"></i>Account</a></li>
                 <li><a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
                 <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a></li>
@@ -32,38 +35,68 @@
                 <li><a href="/Kanbas/Help/screen.html"><i class="far fa-question-circle" style="margin-right: 8px; font-size: 30px;"></i>Help</a></li>
             </ul>
         </div>
-        <div>
-            <ul class="wd-course-navigation d-none d-md-block">
-                <li><a href="">Notifications</a></li>
-                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                <li><a href="">Files</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">ePortfolios</a></li>
-                <li><a href="">Shared Content</a></li>
-                <li><a href="">The Hub</a></li>
-                <li><a href="">Quickly Course Tools</a></li>
-                <li><a href="">Global Announcements</a></li>
-            </ul>
-        </div>
-        <div class="wd-flex-grow-1" style="margin-left: 20px; padding: 30px;">
-            <p>Xinjia Zhang's Profile</p>
-            <hr>
-            <div class="wd-profile-section">
-                <!-- <i class="fas fa-user " style="color: gray; size: 100px;"></i> -->
-                <i class="fas fa-user-circle wd-profile-icon"></i>
-                <form action="/Kanbas/Account/Profile/ProfileEditor/screen.html" class="wd-profile-form">
-                    <button class="btn btn-secondary" style="margin-left: 200px; align-self: flex-start;"><i class="fas fa-pencil-alt"></i> Edit Profile</button>
-                </form>
+
+        
+
+        <div style="flex-grow: 1;">
+            <!--top title bar-->
+            <div class="row">
+                <div class="col-auto">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#courseNavigation">
+                    <i class="fas fa-bars ps-4 pt-4 fa-lg text-danger"></i>
+
+                    </button>
+                </div>
+                <div class="col pt-3">
+                    <h4>Xinjia Zhang's Profile</h4>
+                </div>
+                <hr/>
             </div>
-            <h3 style="margin-bottom: 30px;">Xinjia Zhang</h3>
-            <h4>Contact</h4>
-            <p>No registered services, you can add some on the <a href="">settings</a> page.</p>
-            <h4>Biography</h4>
-            <p>Software Engineer</p>
-            <h4>Links</h4>
-            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk">Youtube</a><br>
-            <a href="https://www.linkedin.com/in/xinjia-zhang-297985232/">LinkedIn</a>
+            <!--bottom bar: navigation + real content-->
+            <div class="row">
+                <div class="col-2 d-none d-md-block">
+                    <ul class="wd-course-navigation d-none d-md-block">
+                        <li><a href="">Notifications</a></li>
+                        <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                        <li><a href="">Files</a></li>
+                        <li><a href="">Settings</a></li>
+                        <li><a href="">ePortfolios</a></li>
+                        <li><a href="">Shared Content</a></li>
+                        <li><a href="">The Hub</a></li>
+                        <li><a href="">Quickly Course Tools</a></li>
+                        <li><a href="">Global Announcements</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 mx-5 pt-3">
+                    
+                    <div class="wd-flex-grow-1" style="margin-left: 20px; padding: 30px;">
+                        
+                        <div class="wd-profile-section">
+                            <i class="fas fa-user-circle wd-profile-icon"></i>
+                            
+                        </div>
+                        <h3 style="margin-bottom: 30px;">Xinjia Zhang</h3>
+                        <h4>Contact</h4>
+                        <p>No registered services, you can add some on the <a href="">settings</a> page.</p>
+                        <h4>Biography</h4>
+                        <p>Software Engineer</p>
+                        <h4>Links</h4>
+                        <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk">Youtube</a><br>
+                        <a href="https://www.linkedin.com/in/xinjia-zhang-297985232/">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-2">
+
+
+                    <form action="/Kanbas/Account/Profile/ProfileEditor/screen.html" class="wd-profile-form">
+                        <button class="btn btn-secondary" style="size: 120px;"><i class="fas fa-pencil-alt"></i> Edit Profile</button>
+                    </form>
+                </div>
+            </div>
+            
         </div>
+        
+
     </div>
 </body>
 </html>

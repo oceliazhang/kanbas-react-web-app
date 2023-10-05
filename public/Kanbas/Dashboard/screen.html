@@ -2,133 +2,186 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendors/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="/vandors/fontawesome-free/css/all.css" />
+    <link rel="stylesheet" href="/vandors/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Kanbas/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
+
 <body>
     <div class="d-block d-md-none">
         <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
         <a href="/Kanbas/Courses/CourseNavigation">Course Navigator</a>
-      </div>
-      <div class="wd-flex-row-container">
-        <div class="wd-bg-color-black d-none d-md-block">
-          <ul class="wd-kanbas-navigation">
-
-            <li><a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user" style="color: white;"></i>Account</a></li>
-            <li class="wd-active"><a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a></li>
-            <li><a href="/Kanbas/Calendar/screen.html"><i class="fas fa-calendar-day"></i>Calendar</a></li>
-            <li><a href="/Kanbas/Inbox/screen.html"><i class="fas fa-inbox"></i>Inbox</a></li>
-            <li><a href="/Kanbas/History/screen.html"><i class="far fa-clock"></i>History</a></li>
-            <li><a href="/Kanbas/Studio/screen.html"><i class="fas fa-film"></i>Studio</a></li>
-            <li><a href="/Kanbas/Commons/screen.html"><i class="fas fa-external-link-alt"></i>Commons</a></li>
-            <li><a href="/Kanbas/Help/screen.html"><i class="far fa-question-circle" style="margin-right: 8px; font-size: 30px;"></i>Help</a></li>
-
-          </ul>
+    </div>
+    <div class="wd-flex-row-container">
+        <div class="wd-bg-color-black d-none d-md-block" style="margin-right: 20px;">
+            <ul class="wd-kanbas-navigation">
+                <li style="color: brown; font-size: 50px;">N</li>
+                <li><a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user" style="color: white;"></i>Account</a></li>
+                <li class="wd-active"><a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a></li>
+                <li><a href="/Kanbas/Calendar/screen.html"><i class="fas fa-calendar-day"></i>Calendar</a></li>
+                <li><a href="/Kanbas/Inbox/screen.html"><i class="fas fa-inbox"></i>Inbox</a></li>
+                <li><a href="/Kanbas/History/screen.html"><i class="far fa-clock"></i>History</a></li>
+                <li><a href="/Kanbas/Studio/screen.html"><i class="fas fa-film"></i>Studio</a></li>
+                <li><a href="/Kanbas/Commons/screen.html"><i class="fas fa-external-link-alt"></i>Commons</a></li>
+                <li><a href="/Kanbas/Help/screen.html"><i class="far fa-question-circle" style="margin-right: 8px; font-size: 30px;"></i>Help</a></li>
+            </ul>
         </div>
 
-        <div>
-            <h1>Dashboard</h1>
+        <!-- 再是一个整体，需要有标题，分割线，和下面三栏内容 -->
+        <div class="rest-page">
+
+            <!-- 这里是Dashboard标题 -->
+            <!-- <p style="font-size: 28px;">
+                Dashboard
+            </p> -->
+            <h1 style="margin-top: 10px;">Dashboard</h1>
+            <!-- 分割线 -->
             <hr>
-            <div style="margin: 20px">
-                <h2>Published Courses(7)</h2>
+            <!-- 接下来是一个整体，包含上方文字，分割线，卡片群 -->
+            <div class="dashboard-mainarea">
+                <h3>
+                    Published course (7)
+                </h3>
                 <hr>
-                <div class="row gx-4 gy-4 d-flex flex-row flex-wrap">
+                <!-- 卡片群 -->
+                <div class="row d-flex justify-content-start flex-wrap">
 
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #c389d6; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS5610 Web Dev</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--1-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #f183d7; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #5371e9; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS5800 Algorithms</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--2-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #4461d5; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #4d8ca1; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS5004 OOD</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--3-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #10cfed; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #e3ed5e; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS5002 Discrete Maths</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--4-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #3571d7; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #8744df; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS5001 Python</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--5-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #e77b60; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #f37e7e; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS5008 Data Structure</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--6-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #a0dc82; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="card" style="width: 260px;">
-                            <div class="card-img-top" style="background-color: #22aae4; height: 150px;"></div>
-                            <div class="card-body">
-                                <h5 class="card-title mb-1"><a href="#">CS 5200 Database</a></h5>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Term: Spring 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Year: 2023</p>
-                                <p class="card-text mb-0" style="font-size: 0.8rem;">Section: A</p>
-                            </div>
+                    <!--7-->
+                    <div class="col-auto ms-5 mt-4 mb-4" style="width: 260px;">
+                        <div class="card h-100">
+                          <div style="background-color: #4fc4e7; height: 150px;"><i
+                              class="fa-solid fa-ellipsis-vertical float-end me-4 pt-4 text-white fa-lg"></i></div>
+                          <div class="card-body">
+                            <a href="../Courses/Home/screen.html"
+                              class="card-title col-12 text-truncate text-decoration-none d-inline-block">CS5002 Discrete
+                              Structure</a>
+                            <p class="card-text">CS5002.36234.202310<br />
+                              <small>Fall 2023 Semester Full Term</small>
+                            </p>
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
                         </div>
                     </div>
- 
+                    
                 </div>
             </div>
             
+
+
         </div>
 
-      </div>
+        
+        
+
+    </div>
 </body>
 </html>
