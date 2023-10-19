@@ -8,6 +8,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import "./index.css";
 
 function Courses() {
   const { courseId } = useParams();
@@ -19,8 +20,8 @@ function Courses() {
     <div>
 
       {/* header */}
-      <div className="container-fluid">
-        <div className="row align-items-center">
+      <div className="container-fluid expand">
+        <div className="row align-items-center expand">
           <div className="col-auto">
             <button className="btn" type="button" data-bs-toggle="collapse" data-bs-target="#courseNavigation">
               <i className="fas fa-bars ps-4 pt-4 fa-lg text-danger"></i>
@@ -44,7 +45,7 @@ function Courses() {
             </button>
           </div>
         </div>
-        <hr />
+        <hr/>
       </div>
 
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
+import Button from "./button";
+import './index.css';
 
 function Assignments() {
   const { courseId } = useParams();
@@ -8,8 +10,9 @@ function Assignments() {
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
   return (
-    <div>
-      <h2>Assignments for course {courseId}</h2>
+    <div className="away-from-edge">
+      {/* <h2>Assignments for course {courseId}</h2> */}
+      <Button />
       <div className="list-group">
         {courseAssignments.map((assignment) => (
           <Link
