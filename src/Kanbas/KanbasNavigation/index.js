@@ -1,11 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { BiUserCircle } from "react-icons/bi";
-import { RiDashboard3Fill } from "react-icons/ri";
+import { RiComputerFill, RiDashboard3Fill } from "react-icons/ri";
 import { FaBook } from "react-icons/fa";
 import { BsFillCalendar2WeekFill } from "react-icons/bs";
 import { BsFillInboxesFill } from "react-icons/bs";
 import {AiOutlineHistory} from "react-icons/ai";
-import {PiTelevisionBold} from "react-icons/pi";
+
 import  {FaCreativeCommonsSa} from "react-icons/fa";
 import {BiHelpCircle} from "react-icons/bi";
 import "./index.css";
@@ -20,7 +20,7 @@ function KanbasNavigation() {
     Calendar: <BsFillCalendar2WeekFill className="wd-icon" />,
     Inbox: <BsFillInboxesFill className="wd-icon" />,
     History: <AiOutlineHistory className="wd-icon" />,
-    Studio: <PiTelevisionBold className="wd-icon" />,
+    Studio: <RiComputerFill className="wd-icon" />,
     Commons: <FaCreativeCommonsSa className="wd-icon" />,
     Help: <BiHelpCircle className="wd-icon" />,
   };
