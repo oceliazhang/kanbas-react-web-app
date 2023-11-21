@@ -1,27 +1,55 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function EncodingParametersInURLs() {
+
+  const REMOTE_URL = "https://kanbas-node-server-app-5ptl.onrender.com";
+
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [result, setResult] = useState(0);
+
   const fetchSum = async (a, b) => {
-    const response = await
-      axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+    const response = await axios.get(`${REMOTE_URL}/a5/add/${a}/${b}`);
     setResult(response.data);
   };
+
   const fetchSubtraction = async (a, b) => {
-    const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`);
+    const response = await axios.get(`${REMOTE_URL}/a5/subtract/${a}/${b}`);
     setResult(response.data);
   };
+
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(`${REMOTE_URL}/a5/welcome`);
     setWelcome(response.data);
   };
+
   useEffect(() => {
     fetchWelcome();
   }, []);
+
+
+  // const [a, setA] = useState(34);
+  // const [b, setB] = useState(23);
+  // const [result, setResult] = useState(0);
+  // const fetchSum = async (a, b) => {
+  //   const response = await
+  //     axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+  //   setResult(response.data);
+  // };
+  // const fetchSubtraction = async (a, b) => {
+  //   const response = await axios.get(
+  //     `http://localhost:4000/a5/subtract/${a}/${b}`);
+  //   setResult(response.data);
+  // };
+  // const [welcome, setWelcome] = useState("");
+  // const fetchWelcome = async () => {
+  //   const response = await axios.get("http://localhost:4000/a5/welcome");
+  //   setWelcome(response.data);
+  // };
+  // useEffect(() => {
+  //   fetchWelcome();
+  // }, []);
 
   return (
     <div>
@@ -52,7 +80,7 @@ function EncodingParametersInURLs() {
       </button>
 
       <h3>Path Parameters</h3>
-      <a
+      {/* <a
         href={`http://localhost:4000/a5/add/${a}/${b}`}
         className="btn btn-success">
         Add {a} + {b}
@@ -72,6 +100,20 @@ function EncodingParametersInURLs() {
         href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
         className="btn btn-danger">
         Substract {a} - {b}
+      </a> */}
+
+<a href={`${REMOTE_URL}/a5/add/${a}/${b}`} className="btn btn-success">
+        Add {a} + {b}
+      </a>
+      <a href={`${REMOTE_URL}/a5/subtract/${a}/${b}`} className="btn btn-danger">
+        Subtract {a} - {b}
+      </a>
+      <h3>Query Parameters</h3>
+      <a href={`${REMOTE_URL}/a5/calculator?operation=add&a=${a}&b=${b}`} className="btn btn-primary">
+        Add {a} + {b}
+      </a>
+      <a href={`${REMOTE_URL}/a5/calculator?operation=subtract&a=${a}&b=${b}`} className="btn btn-danger">
+        Subtract {a} - {b}
       </a>
 
     </div>

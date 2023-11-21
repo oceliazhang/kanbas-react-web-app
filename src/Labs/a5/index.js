@@ -27,14 +27,14 @@ import WorkingWithObjects from "./WorkingWithObjects.js";
 import WorkingWithArrays from "./WorkingWithArrays.js";
 
 function Assignment5() {
-    const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
-    const welcomeURL = `${API_BASE}/a5/welcome`;
+    // const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
+    // const welcomeURL = `${API_BASE}/a5/welcome`;
 
     return (
       <div>
         <h1>Assignment 5</h1>
         <div className="list-group">
-          <a href={welcomeURL} className="list-group-item">
+          <a href="https://kanbas-node-server-app-5ptl.onrender.com/a5/welcome" className="list-group-item">
             Welcome
           </a>
           <EncodingParametersInURLs />
