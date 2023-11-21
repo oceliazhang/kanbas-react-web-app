@@ -54,7 +54,7 @@ function EncodingParametersInURLs() {
       <h3>Path Parameters</h3>
       <a
         href={`http://localhost:4000/a5/add/${a}/${b}`}
-        className="btn btn-primary">
+        className="btn btn-success">
         Add {a} + {b}
       </a>
       <a
