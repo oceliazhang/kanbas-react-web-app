@@ -2,12 +2,7 @@ import React, { useState } from "react";
 function ArrayStateVariable() {
   const [array, setArray] = useState([1, 2, 3, 4, 5]);
   const addElement = () => {
-    const newArray = [
-
-      ...array,
-      Math.floor(Math.random() * 100),
-    ];
-    setArray(newArray);
+    setArray([...array, Math.floor(Math.random() * 100)]);
   };
   const deleteElement = (index) => {
     setArray(array.filter((item, i) => i !== index));
@@ -15,12 +10,13 @@ function ArrayStateVariable() {
   return (
     <div>
       <h2>Array State Variable</h2>
-      <button onClick={addElement}>Add Element</button>
+      <button className="btn btn-success me-2" onClick={addElement}>Add Element</button>
       <ul>
         {array.map((item, index) => (
           <li key={index}>
             {item}
-            <button onClick={() => deleteElement(index)}>Delete</button>
+            <button className="btn btn-danger mt-1 ms-1"onClick={() => deleteElement(index)}>
+              Delete</button>
           </li>
         ))}
       </ul>
@@ -28,3 +24,4 @@ function ArrayStateVariable() {
   );
 }
 export default ArrayStateVariable;
+

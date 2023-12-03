@@ -1,25 +1,26 @@
+import React from "react";
 import Add from "./Add";
-import ArrayStateVariable from "./ArrayStateVariable";
-import BooleanStateVariables from "./BooleanStateVariables";
 import ClickEvent from "./ClickEvent";
-import Counter from "./Counter";
-import DateStateVariable from "./DateStateVariable";
-import EventObject from "./EventObject";
-import ObjectStateVariable from "./ObjectStateVariable";
-import ParentStateComponent from "./ParentStateComponent";
 import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
-import ReduxExamples from "./ReduxExamples";
+import EventObject from "./EventObject";
+import Counter from "./Counter";
+import BooleanStateVariables from "./BooleanStateVariables";
 import StringStateVariables from "./StringStateVariables";
-
+import DateStateVariable from "./DateStateVariable";
+import ObjectStateVariable from "./ObjectStateVariable";
+import ArrayStateVariable from "./ArrayStateVariable";
+import ParentStateComponent from "./ParentStateComponent";
+import ReduxExamples from "./ReduxExamples";
 function Assignment4() {
-  const sayHello = () => {
-    alert("Hello World!");
-  };
+  function sayHello() {
+    alert("Hello");
+  }
   return (
     <div>
       <h1>Assignment 4</h1>
-      <ReduxExamples />
+      <ReduxExamples/>
+
       <ParentStateComponent />
       <ArrayStateVariable />
       <ObjectStateVariable />
@@ -28,18 +29,11 @@ function Assignment4() {
       <BooleanStateVariables />
       <Counter />
       <EventObject />
-      <PassingFunctions
-        theFunction={() => {
-          alert("Life is Good!");
-          sayHello();
-        }}
-      />
+      <PassingFunctions theFunction={sayHello} />
       <PassingDataOnEvent />
       <ClickEvent />
       <Add a={1} b={2} />
-      {Add({ a: 99, b: 5 })}
     </div>
   );
 }
-
-export default Assignment4;
+export default Assignment4

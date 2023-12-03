@@ -4,7 +4,7 @@ function StringStateVariables() {
   return (
     <div>
       <h2>String State Variables</h2>
-      <h4>{firstName}</h4>
+      <p>{firstName}</p>
       <input
         className="form-control"
         value={firstName}

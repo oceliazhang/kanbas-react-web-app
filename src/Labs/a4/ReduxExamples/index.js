@@ -1,6 +1,6 @@
 import React from "react";
-import Counter1 from "./counters/Counter1";
-import Counter2 from "./counters/Counter2";
+import AddRedux from "./AddRedux";
+import CounterRedux from "./CounterRedux";
 import HelloRedux from "./HelloRedux";
 import TodoList from "./todos/TodoList";
 
@@ -9,8 +9,8 @@ const ReduxExamples = () => {
     <div>
       <h2>Redux Examples</h2>
       <TodoList />
-      <Counter1 />
-      <Counter2 />
+      <AddRedux />
+      <CounterRedux />
       <HelloRedux />
     </div>
   );

@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
   modules: [],
   module: { name: "New Module 123", description: "New Description" },
@@ -28,16 +27,16 @@ const modulesSlice = createSlice({
         }
       });
     },
-    setModules: (state, action) => {
-      state.modules = action.payload;
-    },
     setModule: (state, action) => {
       state.module = action.payload;
+    },
+    setModules: (state, action) => {
+      state.modules = action.payload;
     },
   },
 });
 
 
 export const { addModule, deleteModule,
-  updateModule, setModules, setModule  } = modulesSlice.actions;
+  updateModule, setModule, setModules } = modulesSlice.actions;
 export default modulesSlice.reducer;

@@ -1,26 +1,18 @@
 function ClickEvent() {
-  const hello = (message) => {
-    alert(`Message: ${message}`);
-  };
-  const helloOriginal = () => {
+  const hello = () => {
     alert("Hello World!");
   };
-
   const good = () => {
     alert("Life is Good!");
   };
   return (
     <div>
       <h2>Click Event</h2>
-      <button onClick={helloOriginal}>
-        Click Hello </button>
-      
-      <button onClick={() => hello("Hello World")}>Click Hello 1 </button>
-      <button onClick={() => hello("Hello World")}>Click Hello 2 </button>
-      <button
+      <button className="btn btn-primary me-1" onClick={hello}>Click Hello 1 </button>
+      <button className="btn btn-primary me-1" onClick={() => hello()}>Click Hello 2 </button>
+      <button className="btn btn-primary me-1"
         onClick={() => {
           hello();
-          console.log("Hello World!");
           good();
         }}
       >

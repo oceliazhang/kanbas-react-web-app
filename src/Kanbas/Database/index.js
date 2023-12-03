@@ -5,7 +5,7 @@ import users from "./users.json"
 import grades from "./grades.json"
 import enrollments from "./enrollments.json"
 
-const config = {
+export default {
   courses,
   modules,
   assignments,
@@ -13,4 +13,3 @@ const config = {
   grades,
   enrollments
 };
-export default config;

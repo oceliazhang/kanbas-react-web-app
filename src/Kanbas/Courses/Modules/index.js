@@ -1,19 +1,11 @@
 import ModuleList from "./ModuleList";
-import Button from "./button";
-import Status from "./status";
-
+import ModuleButton from "./ModuleButton";
 function Modules() {
   return (
-    <div className="row">
-      <div className="col-9">
-        <Button />
-        <ModuleList />
-      </div>
-      <div className="col-2">
-        <Status />
-      </div>
+    <div className= "col-10 mx-5">
+      <ModuleButton />
+      <ModuleList />
     </div>
-    
   );
 }
 export default Modules;
